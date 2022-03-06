@@ -22,7 +22,7 @@ express()
       const result = await client.query('SELECT * FROM newtable');
       const results = { 'results': (result) ? result.rows : null};
       res.render('pages/db', results );
-      
+      console.log('hello');
       client.release();
     } catch (err) {
       console.error(err);
